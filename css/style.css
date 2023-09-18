@@ -1,0 +1,307 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto/Roboto-Medium.ttf);
+}
+nav .navber-brand ::after{
+    content: ".";
+   color: #FEB900;
+}
+.hero .hero-bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+  }
+.hero{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+header{
+    height: 90px;
+}
+nav{
+    width: 1200px;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+}
+nav .navber-brand{
+    width: 300px;
+    line-height: 90px;
+}
+nav .navber-brand h2{
+    font-size: 25px;
+    color:white;
+    text-align: center;
+}
+ .navber{
+    width: 650px;
+    height: 90px;
+    margin-right: 60px;
+}
+.navber .navber-nav .nav-item{
+  list-style-type: none;
+  position: relative;
+}
+.navber .navber-nav {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navber .navber-nav .nav-item .nav-link{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.753);
+    font-family: roboto;
+    transition: 0.2s;
+    padding: 5px 0;
+    font-size: 15px;
+    font-family: roboto;
+}
+.navber .navber-nav .nav-item .nav-link.active{
+    color: white;
+    border-bottom:  2px solid #FEB900;
+}
+.navber .navber-nav .nav-item .nav-link:hover{
+    color: white;
+}
+.navber .navber-nav .nav-item .dropdown{
+    position: absolute;
+    width: 150px;
+    background-color: white;
+    margin-top: 5px;
+    display: none;
+}
+.navber .navber-nav .nav-item  .dropdown .navber-nav{
+    flex-direction: column;
+    height: auto;
+    width: 280px;
+    display: inline-block;
+    padding: 10px 15px;
+}
+.navber .navber-nav .nav-item .dropdown .navber-nav .nav-item .nav-link{
+    color: black;
+    padding: 10px 0;
+    display: block;
+    font-family: roboto;
+}
+.navber .navber-nav .nav-item .dropdown .navber-nav .nav-item .nav-link:hover{
+    color: #FEB900;
+}
+.navber .navber-nav .nav-item:hover .dropdown{
+    animation: dropdownAnimation 0.5s;
+    display: block;
+}
+@keyframes dropdownAnimation {
+    from{
+        transform: translateY(30px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}  
+.navber .navber-nav .nav-item .dropdown  .nav-item {
+    position: relative;
+}
+.navber .navber-nav .nav-item .dropdown .nav-item .sub-dropdown{
+    position: absolute;
+    left: -63%;
+    top: -20%;
+    background-color: white;
+    width: 150px;
+    display: none;
+}
+.navber .navber-nav .nav-item .dropdown .nav-item:hover .sub-dropdown{
+    display: block;
+    animation: sub-dropdownAnimation 0.5s;
+}
+@keyframes sub-dropdownAnimation {
+    from{
+        transform: translateX(30px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.hero .hero-bg .title{
+    width: 600px;
+    height: 370px;
+
+    margin: 40px auto;
+}
+.hero .title .description{
+   width: 350px;
+   height: 140px;
+   margin: auto;
+}
+.hero .title .description h1{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+.hero .title .boder{
+    width: 90px;
+    height: 5px;
+    background-color: #FEB900;
+    margin: auto;
+}
+.hero .title .title-description{
+    width: 90%;
+    height: 120px;
+    margin: auto;
+    margin-top: 30px;
+}
+.hero .title .title-description p{
+    font-family: roboto;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+.hero .title .title-but{
+    width: 180px;
+    height: 50px;
+    margin: auto;
+}
+.hero .title  button{
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    border: 3px solid #FEB900;
+    background:transparent;
+    transition: 0.3s;
+}
+.hero .title-but:hover button{
+    background-color: #FEB900;
+}
+.container{
+    width: 1200px;
+    margin: auto;
+    padding: 100px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.container .sid-left{
+    width: 48%;
+    height: 800px;
+    background-color: blue;
+}
+.container .sid-left img{
+    width: 100%;
+    height: 100%;
+}
+.container .sid-right{
+    width: 48%;
+    height: 800px;
+}
+.container .sid-right .right-description{
+    width: 100%;
+    height: 100px;
+}
+.container .sid-right .right-description h1{
+    font-family: roboto;
+    font-size: 35px;
+    color: #50545C;
+}
+.container .sid-right .boder{
+    width: 80px;
+    height: 4px;
+    background-color: #FEB900;
+}
+.container .sid-right .contain-description{
+  width: 100%;
+  height: 120px;
+  margin-bottom: 50px;
+}
+.container .sid-right .contain-description p{
+    color: #3333339a;
+    font-family: roboto;
+    padding: 20px 0;
+    font-size: 20px;
+}
+.container .sid-right .lorem-ipsum{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 28px;
+}
+.container .sid-right .lorem-ipsum .icon{
+    width: 10%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+    text-decoration: 0.2s;
+}
+.container .sid-right .lorem-ipsum:hover .icon{
+    background-color: #FEB900;
+}
+.container .sid-right .lorem-ipsum:hover .fa-solid{
+    color: white !important;
+}
+.container .sid-right .lorem-ipsum .icon .fa-solid {
+   font-size: 30px;
+   padding: 15px 10px;
+   color: #FEB900;
+
+}
+.container .sid-right .lorem-ipsum .text{
+    width: 80%;
+    height: 100%;
+}
+.container .sid-right .lorem-ipsum .text:hover h1{
+  color: #FEB900;
+}
+.container .sid-right .lorem-ipsum .text h1{
+    color: #333333;
+    font-family: roboto;
+    font-size: 23px;
+}
+.container .sid-right .lorem-ipsum .text p{
+    font-size: 18px;
+    font-family: roboto;
+    color: #333333;
+    padding: 10px 0;
+
+}
+footer{
+    width: 100%;
+    background-color: #333333;
+}
+footer p{
+    font-size: 15px;
+    padding: 50px;
+    color: white;
+    text-align: center;
+}
